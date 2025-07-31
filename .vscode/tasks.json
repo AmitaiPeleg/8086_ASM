@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Assemble 8086 ASM with TASM (DOSBox)",
+            "type": "shell",
+            "command": "C:/TASM/DOSBox.exe",
+            "args": [
+                "-noconsole",
+                "-fullscreen",
+                "-c",
+                "mount c C:/Users/amita/OneDrive/8086_ASM",
+                "-c",
+                "c:",
+                "-c",
+                "tasm.exe /zi ${fileBasenameNoExtension}.asm",
+                "-c",
+                "tlink /v ${fileBasenameNoExtension}.obj",
+                "-c",
+                "td ${fileBasenameNoExtension}.exe",
+                "-c",
+                "exit"
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ],
+    "inputs": []
+}
