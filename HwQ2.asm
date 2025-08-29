@@ -36,9 +36,7 @@ numS db  7 dup(' '),'$'
 	mov	bx,	10
 	mov	si,	offset numS+5
 	
-	;cmp ax,0
-	;jge next
-	;neg ax
+	
 
 next:	
 	mov dx,0
