@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "C:/TASM/DOSBox.exe",
             "args": [
-                "-noconsole",
+                // "-noconsole",
                 // "-fullscreen",
                 "-c",
                 "mount c C:/Users/amita/OneDrive/8086_ASM",

@@ -14,6 +14,10 @@ mov al, A[si]
 mov B[si], al
 cmp al,'$'
 jne myLoop
+mov si, offset B
+mov ah ,9
+mov dx,si
+int 21h
 .exit
 
 end

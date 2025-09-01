@@ -1,21 +1,4 @@
-.model  small
-.stack   100h
-.data
-a dw -20000,512,31000,1234
-N equ 4
-
-numS db  7 dup(' '),'$'
-
-.code
-	mov	ax,	@data
-	mov	ds,	ax
-
-	mov di,0 ;points to a
-	mov cl,0 ;counter
 	
-	myLoop:
-	mov	ax,	a[di]
-	mov	bx,	10
 .model  small
 .stack   100h
 .data
