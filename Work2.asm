@@ -16,9 +16,7 @@ N equ 3
 sum proc near          
     push bp
     mov bp, sp
-    push bx            
-    push cx
-    push dx
+  
     
     mov ax, [bp+4]     
     mov cx, 0          
@@ -33,9 +31,7 @@ myLoop1:
     
     mov ax, cx        
     
-    pop dx            
-    pop cx
-    pop bx
+   
     pop bp
     ret 2
 sum endp
