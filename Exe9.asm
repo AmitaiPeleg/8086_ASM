@@ -23,8 +23,6 @@ add cx, dx
 cmp ax, 0
 jne myLoop1
 mov ax, cx
-
-
 pop bp
 ret 2
 sum endp

@@ -1,42 +1,27 @@
 .model small
 .stack 100h
 .data
-a db 1, 2, 3, 2
-N equ 4
-
+str1 db 'aaa$'
 .code
 mov ax,@data
 mov ds, ax
 
-push offset a
-push n
-call maxArray
+push offset str1
+call numOfChar
 .exit
-maxArray proc near
+numOfChar proc near
 push bp
 mov bp, sp
-mov si, [bp+6]
-mov cx, [bp+4]
-
-cmp cx, 0
-jne rec
-mov ax, 0
-jmp sof
-
-rec:
-push si
-inc si
-push si
-dec cx
-push cx
-
-call maxArray
-pop si
-cmp al, [si]
-jg sof
-mov al,[si]
+mov bx,[bp+4]
+mov al, 0	; al=result
+myLoop:
+cmp byte ptr[bx], '$'
+je sof
+inc al
+inc bx
+jmp myLoop
 sof:
 pop bp
-ret 4
-maxArray endp
+ret 2
+numOfChar endp
 end
