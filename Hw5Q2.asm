@@ -1,10 +1,10 @@
 .model  small
 .stack   100h
 .data
-A   dw   12, 2
-B   dw    -2, 2
-C   dw     2   dup (?)
-N equ 2
+A dw 12,5,8,-1,4
+B dw -2,9,0,18,3
+C   dw     5   dup (?)
+N equ 5
 
 .code
 	mov	ax,	@data
